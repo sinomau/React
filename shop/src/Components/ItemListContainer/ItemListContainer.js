@@ -1,17 +1,24 @@
+import "./ItemListContainer.css";
+import { useEffect, useState } from "react";
+import { getProducts } from "../AsyncMock/AsyncMock";
+import ItemList from "../ItemList/ItemList";
 
-import './ItemListContainer.css'
+const ItemListContainer = ({ greeting }) => {
+  const [products, setProducts] = useState([]);
 
-import ItemCount from '../ItemCount/ItemCount';
+  useEffect(() => {
+    getProducts().then((response) => {
+      setProducts(response);
+    });
+  }, []);
 
-const ItemListContainer = ({ greeting }) =>{
-    return (
-        <div>
-        <h1>{greeting}</h1>
-       
-        <ItemCount />
-        </div>
-    )
+  return (
+    <div className="d-flex flex-column flex-wrap">
+      <h1>{greeting}</h1>
 
-}
+      <ItemList products={products} />
+    </div>
+  );
+};
 
 export default ItemListContainer;

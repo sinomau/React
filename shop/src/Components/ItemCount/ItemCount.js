@@ -1,4 +1,3 @@
-
 import {useState} from 'react'
 
 const ItemCount = () => {
@@ -6,6 +5,7 @@ const ItemCount = () => {
 
 
     const increment = () => {
+        if (count < 5) 
         setCount (count + 1);
     }
 

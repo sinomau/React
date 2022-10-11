@@ -7,6 +7,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget';
 import logo from './assets/img/3d.svg'
+import {Link} from 'react-router-dom'
 
 const NavBar = () =>{
     return (
@@ -14,10 +15,10 @@ const NavBar = () =>{
     <Navbar bg="light" expand="lg">
       <Container>
         <div class="container__logo">
-          <img class="logo" src={logo} alt="logo" />
+          <Link to='/'><img class="logo" src={logo} alt="logo" /></Link>
           <h2>Plain</h2>
         </div>
-        <Navbar.Brand href="#home"></Navbar.Brand>
+        <Navbar.Brand href="#home"></Navbar.Brand >
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
