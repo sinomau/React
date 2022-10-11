@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import { getProducts, getProductsByCategory } from "../AsyncMock/AsyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import Spinner from 'react-bootstrap/Spinner';
+import { loading } from "../Loading/Loading";
+
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
-  const [loading,setLoading] = useState(true);
+  const [load,setLoading] = useState(true);
   const {categoryId} = useParams()
   
 
@@ -24,12 +25,10 @@ const ItemListContainer = ({ greeting }) => {
     })
   },[categoryId])
 
-  if(loading){
+  if(load){
     
     return (
-    <Spinner animation="border" role="status">
-    <span className="visually-hidden">Loading...</span>
-  </Spinner>)
+    loading())
   }
 
   return (
