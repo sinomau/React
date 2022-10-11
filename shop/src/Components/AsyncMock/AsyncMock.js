@@ -13,7 +13,8 @@ const products = [
     mat: "PLA",
     price: 1000,
     stock: 2,
-    detail:"Macetas realizadas en PLA, diversos colores."
+    detail:"Macetas realizadas en PLA, diversos colores.",
+    category:"decoracion",
 
   },
   {
@@ -24,6 +25,7 @@ const products = [
     price: 1500,
     stock: 4,
     detail:"Gadgets para Ipad ,Iphone realizadas en PLA, diversos colores.",
+    category:"decoracion",
   },
   {
     id: '2',
@@ -33,6 +35,7 @@ const products = [
     price: 1800,
     stock: 5,
     detail:"Figuras de pokemon realizadas en PLA, diversos colores.",
+    category:"figuras",
   },
   {
     id: '3',
@@ -42,6 +45,7 @@ const products = [
     price: 1800,
     stock: 11,
     detail:"Figuras realizadas en PLA, diversos colores y personajes",
+    category:"figuras",
   },
   {
     id: '4',
@@ -51,6 +55,7 @@ const products = [
     price: 2000,
     stock: 3,
     detail:"Cuadro Alce realizados en PETG, diversos colores y diseños.",
+    category:"decoracion",
   },
   {
     id: '5',
@@ -60,6 +65,7 @@ const products = [
     price: 1200,
     stock: 5,
     detail:"Prensas realizadas en PETG, diversos colores.",
+    category:"herramientas",
   },
 ];
 
@@ -77,8 +83,16 @@ export const getProductById = (id) => {
       resolve(products.find(prod => {
         return prod.id === id
       }))
-    }, 100 );
+    }, 2000 );
   })
 } 
 
 
+export const getProductsByCategory = (categoryId) => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(products.filter (prod => prod.category === categoryId))     
+    }, 2000);
+    
+  })
+}

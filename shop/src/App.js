@@ -14,6 +14,8 @@ function App() {
       <Routes>
         <Route path='/' element={ <ItemListContainer greeting={"Bienvenidos a 3DPlain"} />}/>
         <Route path='/detail/:productId' element={  <ItemDetailContainer />}/>
+        <Route path='/category/:categoryId' element={  <ItemListContainer/>}/>
+
       </Routes>
       </BrowserRouter>
     </div>

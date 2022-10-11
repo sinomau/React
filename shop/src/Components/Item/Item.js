@@ -10,8 +10,9 @@ const Item = ({ article, img, mat, price, stock, id }) => {
         <Card.Body>
           <Card.Title>{article}</Card.Title>
           <Card.Text>
-            {mat}
-            <p>Precio: ${price}</p>
+            Material:{mat}
+            <br/>
+             ${price}
           </Card.Text>
           <Link to={`/detail/${id}`}><Button variant="primary">Ver Detalle</Button></Link>
         </Card.Body>
