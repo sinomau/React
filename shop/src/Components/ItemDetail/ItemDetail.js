@@ -1,7 +1,5 @@
-
-
 import React from 'react'
-
+import ItemCount from '../ItemCount/ItemCount';
 const ItemDetail = ({article, img, detail , price} ) => {
   return (
   <div>
@@ -9,6 +7,7 @@ const ItemDetail = ({article, img, detail , price} ) => {
       <img src={img} alt={article}></img>
       <p>{detail}</p>
       <p>Precio: $ {price}</p>
+      <ItemCount />
       <button>Agregar a carrito</button>
     </div>
   
