@@ -1,3 +1,4 @@
+
 import image1 from "../AsyncMock/assets/img/homedeco.jpg";
 import image2 from "../AsyncMock/assets/img/gadget.jpg";
 import image3 from "../AsyncMock/assets/img/gaming.jpg";

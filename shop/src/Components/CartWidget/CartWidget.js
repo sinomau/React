@@ -1,5 +1,6 @@
 import './CartWidget.css'
 import cart from './assets/img/cart.svg'
+import React from 'react'
 
 
 

@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import {Link} from 'react-router-dom'
+import React from 'react'
 
 const Item = ({ article, img, mat, price, stock, id }) => {
   return (

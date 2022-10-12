@@ -1,5 +1,7 @@
 
 
+import React from 'react'
+
 const ItemDetail = ({article, img, detail , price} ) => {
   return (
   <div>

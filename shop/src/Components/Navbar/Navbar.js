@@ -7,6 +7,7 @@ import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget';
 import logo from './assets/img/3d.svg'
 import {Link} from 'react-router-dom'
+import React from 'react'
 
 const NavBar = () =>{
     return (
