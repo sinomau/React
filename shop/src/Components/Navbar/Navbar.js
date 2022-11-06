@@ -23,7 +23,6 @@ const NavBar = () =>{
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
           <Link to={'/'} className="btn" variant="outline-dark"> Inicio</Link>
-          <Link to={'/'} className="btn" variant="outline-dark"> Contacto</Link>
             <NavDropdown title="Productos" id="basic-nav-dropdown">
               <Link to={'/category/figuras'} className="btn"> Figuras 3D</Link>
               <Link to={'/category/decoracion'} className="btn"> Decoracion</Link>

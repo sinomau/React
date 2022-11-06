@@ -13,12 +13,12 @@
 
 .Total__container{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .checkOut__container{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-end;
     
 }
@@ -35,7 +35,6 @@
 
 .Checkout__button{
     display: flex;
-    justify-content: end;
-
+    justify-content: flex-end;
 }
 
