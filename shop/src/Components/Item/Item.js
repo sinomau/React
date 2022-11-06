@@ -3,7 +3,9 @@ import Card from "react-bootstrap/Card";
 import {Link} from 'react-router-dom'
 import React from 'react'
 
+
 const Item = ({ article, img, mat, price, stock, id }) => {
+  
   return (
     <div className="d-flex flex-row flex-wrap m-5 align-items-center justify-content-center ">
       <Card style={{ width: "18rem" }}>

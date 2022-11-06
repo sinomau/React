@@ -1,21 +1,26 @@
 
-
-.cart__container{
+.CartWidget{
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;    flex-direction: row;
+    width: 200px;
+    color: black;
+
+ 
+    
+}
+
+.CartWidget a{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: baseline;
-    
-    
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
+    color:black;
+    font-size: 25px;
 }
 
-.cart__container h5{
-    padding: 10px;
-}
 
-
-.cartLogo{
-    
-    height: 20px;
-    width: 20px;
+.CartWidget img{
+    width: 25px;
 }

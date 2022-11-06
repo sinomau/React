@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+
+.btn-primary{
+    padding: 5px;
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    background-color: black
+}
+
+.btn-primary:hover{
+  background-color: rgb(72, 182, 255)
+}
+
+.btn:hover{
+  background-color: rgb(72, 182, 255)
+}
+

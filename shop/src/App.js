@@ -1,23 +1,34 @@
-import React from 'react'
-import "./App.css";
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./Components/Navbar/Navbar";
-import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
-import { BrowserRouter ,Routes, Route} from 'react-router-dom'
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { CartProvider } from './context/CartContext';
+import { NotificationProvider } from './notification/NotificationService';
+import Navbar from './Components/Navbar/Navbar';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import Cart from './Components/Cart/Cart';
+import Checkout from './Components/Checkout/Checkout';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 
- 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={ <ItemListContainer greeting={"Bienvenidos a 3DPlain"} />}/>
-        <Route path='/detail/:productId' element={  <ItemDetailContainer />}/>
-        <Route path='/category/:categoryId' element={  <ItemListContainer/>}/>
-      </Routes>
-      </BrowserRouter>
+      <NotificationProvider>
+        <CartProvider>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<ItemListContainer />}/>  
+              <Route path='/category/:categoryId' element={<ItemListContainer />} />
+              <Route path='/contact' element={<h1>CONTACT</h1>} />
+              <Route path='/detail/:productId' element={ <ItemDetailContainer />}/> 
+              <Route path='/cart' element={<Cart />}/> 
+              <Route path='/checkout' element={<Checkout />}/> 
+              <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+            </Routes>     
+          </BrowserRouter>
+        </CartProvider>
+      </NotificationProvider>
     </div>
   );
 }
