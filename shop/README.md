@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Proyecto Final React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para iniciar el proyecto correctamente ejecutar de la siguiente manera
 
 ## Available Scripts
 
